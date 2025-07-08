@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 80%;
+  margin: auto;
+  background: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+.header-theme {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  height: 7rem;
+}
+.header-theme__bg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  background: hsl(226, 25%, 17%);
+  width: 100%;
+  height: 4rem;
+  border-radius: 1rem;
+  padding: 0 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+main nav {
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+main nav h1 {
+  color: hsl(200, 60%, 99%);
+  font-size: 2rem;
+}
+main nav button {
+  border: none;
+  padding: 0.4rem 1.1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  background: hsl(226, 25%, 17%);
+  color: hsl(0, 0%, 78%);
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+main nav button.active {
+  background: hsl(3, 86%, 64%);
+  color: hsl(225, 23%, 24%);
+}
+main nav button:hover, main nav button:focus {
+  background: hsl(3, 86%, 64%);
+  color: hsl(225, 23%, 24%);
+  transition: all 0.3s;
+}
+
+.container-cards {
+  border: 2px solid yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.container-cards .card {
+  border: 2px solid red;
+  width: 30.5rem;
+  height: 15rem;
+  border-radius: 1rem;
+  background: hsl(226, 25%, 17%);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-cards .card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+  color: hsl(200, 60%, 99%);
+}
+.container-cards .card__header h2 {
+  font-size: 1.6rem;
+}
+.container-cards .card__header p {
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 78%);
+}
+.container-cards .card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-cards .card__footer button {
+  border: none;
+  padding: 0.4rem 1.1rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  background: hsl(226, 25%, 17%);
+  color: hsl(0, 0%, 78%);
+  border: 0.1rem solid hsl(0, 0%, 78%);
+  transition: all 0.3s;
+}
+.container-cards .card__footer button:hover, .container-cards .card__footer button:focus {
+  background: hsl(3, 86%, 64%);
+  color: hsl(225, 23%, 24%);
+  border: 0.1rem solid hsl(3, 86%, 64%);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.container-cards .card__footer i {
+  font-size: 2.5rem;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+  <link rel="stylesheet" href="style/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div id="lista-produtos">
+    </div>
+
+
+  <header class="header-theme">
+    <div class="header-theme__bg">
+      <img src="assets/images/logo.svg" alt="">
+      <img src="assets/images/icon-sun.svg" alt="">
+    </div>
+  </header>
+  <main>
+    <nav>
+      <h1>Extensions List</h1>
+      <div class="buttons">
+        <button class="active">All</button>
+        <button>Active</button>
+        <button>Inactive</button>
+      </div>
+    </nav>
+
+    <section class="container-cards">
+      <div class="card">
+        <header class="card__header">
+          <img src="assets/images/logo-devlens.svg" alt="">
+          <div class="card__header__text">
+            <h2>DevLens</h2>
+            <p>Quickly inspect page layouts and visualize element boundaries</p>
+          </div>
+        </header>
+        <footer class="card__footer">
+          <button class="btn-remove">Remove</button>
+          <i class="fa-solid fa-toggle-off"></i>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
