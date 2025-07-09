@@ -12,7 +12,7 @@ if (prefersDarkMode) {
 
 async function carregarDados() {
 
-    const response = await fetch('../data.json');
+    const response = await fetch('data.json'); //removi ../
     const dados = await response.json();
 
     const container = document.querySelector('.container-cards');
