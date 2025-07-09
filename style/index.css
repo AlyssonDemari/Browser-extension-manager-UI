@@ -42,6 +42,17 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  padding-bottom: 5rem;
+}
+main .empty {
+  margin: auto;
+  color: hsl(200, 60%, 99%);
+  font-size: 2rem;
+  font-weight: 600;
+  display: none;
+}
+main .empty.active {
+  display: flex;
 }
 main nav {
   height: 6rem;
@@ -78,7 +89,6 @@ main nav button:hover, main nav button:focus {
 }
 
 .container-cards {
-  border: 2px solid yellow;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,7 +96,6 @@ main nav button:hover, main nav button:focus {
   flex-wrap: wrap;
 }
 .container-cards .card {
-  border: 2px solid red;
   width: 30.5rem;
   height: 15rem;
   border-radius: 1rem;
@@ -134,4 +143,10 @@ main nav button:hover, main nav button:focus {
 }
 .container-cards .card__footer i {
   font-size: 2.5rem;
+  color: hsl(3, 86%, 64%);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=index.css.map */
