@@ -12,7 +12,7 @@ if (prefersDarkMode) {
 
 async function carregarDados() {
 
-    const response = await fetch('../data.json');
+    const response = await fetch('data.json'); //removi ../
     const dados = await response.json();
 
     const container = document.querySelector('.container-cards');
@@ -30,17 +30,17 @@ async function carregarDados() {
         // 4. Crie o HTML do novo card
         const cardHTML = `
             <div class="card" data-status="${cardStatus}">
-                <header class="card__header">
-                    <img src="${item.logo}" alt="">
+                <div class="card__header">
+                    <img src="${item.logo}" alt="Icon logo">
                     <div class="card__header__text">
                         <h2>${item.name}</h2>
                         <p>${item.description}</p>
                     </div>
-                </header>
-                <footer class="card__footer">
-                    <button class="btn-remove">Remove</button>
-                    <i class="fa-solid ${toggleIconClass}"></i>
-                </footer>
+                </div>
+                <div class="card__footer">
+                    <button class="btn-remove" aria-label="Remove card">Remove</button>
+                    <button class="button-toggle" aria-label="Enable or disable extension"><i class="fa-solid ${toggleIconClass}"></i></button>
+                </div>
             </div>
         `;
         // 5. Insira o HTML do novo card dentro do contêiner

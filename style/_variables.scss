@@ -1,29 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 $font-family: 'Noto Sans', sans-serif;
+$title-size: 2rem;
+$border-radius-xs: .5rem;
+$border-radius-sm: 1rem;
+$border-radius-lg: 2rem;
+$button-margin: .5rem;
+$main-bottom: 5rem;
+$transition: all 0.3s ease;
 
+$nav-button-mobile: 1rem;
+$title-size-mobile: 1.5rem;
+$button-text-mobile: .8rem;
 
 $themes:(
     light: (
-        light-bg: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%),
+        white: hsl(227, 75%, 14%),
+        bg-primary: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%), 
+        bg-theme: hsl(226, 11%, 37%),
+        bg-cards: #ffffff,
+        text-primary: hsl(226, 25%, 17%),
+        text-card-p: hsl(226, 25%, 17%),
+        button-active: hsl(3, 77%, 44%),
+        button-color: hsl(225, 23%, 90%),
+        text-on-button: #fff
     ),
     dark: (
-        dark-bg: linear-gradient(180deg, #040918 0%, #091540 100%), 
+        white: #fff,
+        bg-primary: linear-gradient(180deg, #040918 0%, #091540 100%), 
+        bg-theme: hsl(226, 11%, 37%),
+        bg-cards: hsl(226, 25%, 17%),
+        text-primary: hsl(0, 0%, 78%),
+        text-card-p: hsl(0, 0%, 78%),
+        button-active: hsl(3, 86%, 64%),
+        button-color: hsl(225, 23%, 24%),
     )
 );
 
-$neutral900: hsl(227, 75%, 14%);
-$neutral800: hsl(226, 25%, 17%);
-$neutral700: hsl(225, 23%, 24%);
-$neutral600: hsl(226, 11%, 37%);
-$neutral300: hsl(0, 0%, 78%);
+@mixin apply-theme($theme-map) {
+  @each $key, $value in $theme-map {
+    --#{$key}: #{$value};
+  }
+}
+
+:root {
+  @include apply-theme(map-get($themes, light));
+}
+
+// 3. Classe para o Modo Escuro (ativada via JS)
+body.dark-mode {
+  @include apply-theme(map-get($themes, dark));
+}
+
+
 $neutral200: hsl(217, 61%, 90%);
 $neutral100: hsl(0, 0%, 93%);
-$neutral0: hsl(200, 60%, 99%);
 
-$red400: hsl(3, 86%, 64%);
 $red500: hsl(3, 71%, 56%);
-$red700: hsl(3, 77%, 44%);
-
-$linear-gradient-light: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
-$linear-gradient-dark: linear-gradient(180deg, #040918 0%, #091540 100%);

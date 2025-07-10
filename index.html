@@ -13,8 +13,8 @@
 <body>
   <header class="header-theme">
     <div class="header-theme__bg">
-      <img src="assets/images/logo.svg" alt="">
-      <img src="assets/images/icon-sun.svg" alt="">
+      <img class="header-theme__logo" src="assets/images/logo.svg" alt="Browser extensions manager UI">
+      <img  id="theme-toggle" src="assets/images/icon-sun.svg" alt="Change theme">
     </div>
   </header>
   <main>
@@ -27,25 +27,26 @@
       </div>
     </nav>
 
-    <h1 class="empty">No itens</h1>
+    <p class="empty">No itens</p>
 
     <section class="container-cards">
       <div class="card">
-        <header class="card__header">
-          <img src="assets/images/logo-devlens.svg" alt="">
+        <div class="card__header">
+          <img src="assets/images/logo-devlens.svg" alt="icon card">
           <div class="card__header__text">
             <h2>DevLens</h2>
             <p>Quickly inspect page layouts and visualize element boundaries</p>
           </div>
-        </header>
-        <footer class="card__footer">
+        </div>
+        <div class="card__footer">
           <button class="btn-remove">Remove</button>
-          <i class="fa-solid fa-toggle-off"></i>
-        </footer>
+          <button class="button-toggle" aria-label="Enable or disable extension"><i class="fa-solid fa-toggle-off"></i></button>
+        </div>
       </div>
     </section>
   </main>
 
   <script src="js/index.js"></script>
+  <script src="js/darkMode.js"></script>
 </body>
 </html>

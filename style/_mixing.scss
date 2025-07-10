@@ -6,3 +6,30 @@
     gap: $gap;
     flex-wrap: $wrap;
 }
+@mixin button ($bg: var(--bg-cards), 
+              $color: var(--text-primary),
+              $radius: $border-radius-sm,
+              $border: none
+              ,) {
+    background: $bg;
+    color: $color;
+    border-radius: $radius;
+    border: $border;
+    padding: .4rem 1.1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: $transition;
+
+    &.active{
+        background: var(--button-active);
+        color: var(--button-color);
+        border: none;
+    }
+
+    &:hover, &:focus{
+        background: var(--button-active);
+        color: var(--button-color);
+        transition: $transition;
+        border: none;
+    }
+}

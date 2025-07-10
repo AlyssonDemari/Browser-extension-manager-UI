@@ -1,4 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --white: hsl(227, 75%, 14%);
+  --bg-primary: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  --bg-theme: hsl(226, 11%, 37%);
+  --bg-cards: #ffffff;
+  --text-primary: hsl(226, 25%, 17%);
+  --text-card-p: hsl(226, 25%, 17%);
+  --button-active: hsl(3, 77%, 44%);
+  --button-color: hsl(225, 23%, 90%);
+  --text-on-button: #fff;
+}
+
+body.dark-mode {
+  --white: #fff;
+  --bg-primary: linear-gradient(180deg, #040918 0%, #091540 100%);
+  --bg-theme: hsl(226, 11%, 37%);
+  --bg-cards: hsl(226, 25%, 17%);
+  --text-primary: hsl(0, 0%, 78%);
+  --text-card-p: hsl(0, 0%, 78%);
+  --button-active: hsl(3, 86%, 64%);
+  --button-color: hsl(225, 23%, 24%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +36,7 @@ body {
   min-height: 100vh;
   width: 80%;
   margin: auto;
-  background: linear-gradient(180deg, #040918 0%, #091540 100%);
+  background: var(--bg-primary);
 }
 
 .header-theme {
@@ -32,11 +55,20 @@ body {
   align-items: center;
   gap: 1rem;
   flex-wrap: nowrap;
-  background: hsl(226, 25%, 17%);
+  background: var(--bg-cards);
   width: 100%;
   height: 4rem;
   border-radius: 1rem;
   padding: 0 1rem;
+}
+.header-theme #theme-toggle {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.header-theme #theme-toggle:hover {
+  background: var(--bg-theme);
+  transition: all 0.3s ease;
 }
 
 main {
@@ -46,7 +78,7 @@ main {
 }
 main .empty {
   margin: auto;
-  color: hsl(200, 60%, 99%);
+  color: var(--text-primary);
   font-size: 2rem;
   font-weight: 600;
   display: none;
@@ -64,28 +96,46 @@ main nav {
   flex-wrap: nowrap;
 }
 main nav h1 {
-  color: hsl(200, 60%, 99%);
+  color: var(--text-primary);
   font-size: 2rem;
 }
 main nav button {
+  background: var(--bg-cards);
+  color: var(--text-primary);
+  border-radius: 1rem;
   border: none;
   padding: 0.4rem 1.1rem;
-  border-radius: 1rem;
   font-size: 1rem;
-  background: hsl(226, 25%, 17%);
-  color: hsl(0, 0%, 78%);
-  margin-left: 0.5rem;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 main nav button.active {
-  background: hsl(3, 86%, 64%);
-  color: hsl(225, 23%, 24%);
+  background: var(--button-active);
+  color: var(--button-color);
+  border: none;
 }
 main nav button:hover, main nav button:focus {
-  background: hsl(3, 86%, 64%);
-  color: hsl(225, 23%, 24%);
-  transition: all 0.3s;
+  background: var(--button-active);
+  color: var(--button-color);
+  transition: all 0.3s ease;
+  border: none;
+}
+@media (max-width: 768px) {
+  main nav {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
+  main nav h1 {
+    font-size: 1.5rem;
+  }
+  main nav button {
+    font-size: 0.8rem;
+  }
 }
 
 .container-cards {
@@ -99,7 +149,7 @@ main nav button:hover, main nav button:focus {
   width: 30.5rem;
   height: 15rem;
   border-radius: 1rem;
-  background: hsl(226, 25%, 17%);
+  background: var(--bg-cards);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -110,43 +160,56 @@ main nav button:hover, main nav button:focus {
   justify-content: space-between;
   align-items: start;
   gap: 1rem;
-  color: hsl(200, 60%, 99%);
+  color: var(--white);
 }
 .container-cards .card__header h2 {
   font-size: 1.6rem;
 }
 .container-cards .card__header p {
   font-size: 1.2rem;
-  color: hsl(0, 0%, 78%);
+  color: var(--text-card-p);
 }
 .container-cards .card__footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container-cards .card__footer button {
-  border: none;
-  padding: 0.4rem 1.1rem;
+.container-cards .card__footer .btn-remove {
+  background: var(--bg-cards);
+  color: var(--text-card-p);
   border-radius: 2rem;
+  border: 0.1rem solid var(--text-card-p);
+  padding: 0.4rem 1.1rem;
   font-size: 1rem;
-  background: hsl(226, 25%, 17%);
-  color: hsl(0, 0%, 78%);
-  border: 0.1rem solid hsl(0, 0%, 78%);
-  transition: all 0.3s;
-}
-.container-cards .card__footer button:hover, .container-cards .card__footer button:focus {
-  background: hsl(3, 86%, 64%);
-  color: hsl(225, 23%, 24%);
-  border: 0.1rem solid hsl(3, 86%, 64%);
-  transition: all 0.3s;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
-.container-cards .card__footer i {
+.container-cards .card__footer .btn-remove.active {
+  background: var(--button-active);
+  color: var(--button-color);
+  border: none;
+}
+.container-cards .card__footer .btn-remove:hover, .container-cards .card__footer .btn-remove:focus {
+  background: var(--button-active);
+  color: var(--button-color);
+  transition: all 0.3s ease;
+  border: none;
+}
+.container-cards .card__footer .button-toggle {
+  background: transparent;
+  border: none;
+}
+.container-cards .card__footer .button-toggle i {
   font-size: 2.5rem;
-  color: hsl(3, 86%, 64%);
+  color: var(--button-active);
   cursor: pointer;
 }
-
-.hidden {
-  display: none;
+@media (max-width: 1238px) {
+  .container-cards .card {
+    width: 23.5rem;
+    height: 13rem;
+  }
+  .container-cards .card__header h2, .container-cards .card__header p {
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=index.css.map */
