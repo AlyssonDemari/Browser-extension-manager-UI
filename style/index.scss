@@ -46,8 +46,6 @@ body {
 }
 
 main {
-    //teste
-    border: 2px solid red;
     @include centralize(column, center, center);
     padding-bottom: $main-bottom;
     
@@ -100,7 +98,7 @@ main {
     flex-wrap: wrap;
 
     .card{
-        width: 29rem;
+        width: 28rem;
         height: 15rem;
         border-radius: $border-radius-sm;
         background: var(--bg-cards);

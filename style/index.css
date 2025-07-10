@@ -77,7 +77,6 @@ body {
 }
 
 main {
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -157,7 +156,7 @@ main nav button:hover, main nav button:focus {
   flex-wrap: wrap;
 }
 .container-cards .card {
-  width: 29rem;
+  width: 28rem;
   height: 15rem;
   border-radius: 1rem;
   background: var(--bg-cards);
