@@ -142,11 +142,11 @@ main nav button:hover, main nav button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 .container-cards .card {
-  width: 30.5rem;
+  width: 29.5rem;
   height: 15rem;
   border-radius: 1rem;
   background: var(--bg-cards);
