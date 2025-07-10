@@ -1,6 +1,6 @@
 ![Design preview for the Browser extensions manager UI coding challenge](./preview.jpg)
 
-## <a href="https://alyssondemari.github.io/Browser-extension-manager-UI/">Frontend Mentor - Browser extensions manager UI</a>
+## <a target="_blank" href="https://alyssondemari.github.io/Browser-extension-manager-UI/">Frontend Mentor - Browser extensions manager UI</a>
 
 ## Welcome! 👋
 
