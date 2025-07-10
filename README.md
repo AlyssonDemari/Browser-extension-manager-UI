@@ -4,9 +4,7 @@
 
 ## Welcome! 👋
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
-
-## The challenge
+### The challenge
 
 Your challenge is to build out this browser extension manager UI and get it looking as close to the design as possible.
 
