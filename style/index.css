@@ -33,6 +33,10 @@ body.dark-mode {
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
   min-height: 100vh;
   width: 80%;
   margin: auto;
@@ -47,6 +51,7 @@ body {
   gap: 1rem;
   flex-wrap: nowrap;
   height: 7rem;
+  width: 96%;
 }
 .header-theme__bg {
   display: flex;
@@ -74,6 +79,10 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
   padding-bottom: 5rem;
 }
 main .empty {
@@ -87,6 +96,7 @@ main .empty.active {
   display: flex;
 }
 main nav {
+  width: 96%;
   height: 6rem;
   display: flex;
   flex-direction: row;
@@ -146,7 +156,7 @@ main nav button:hover, main nav button:focus {
   flex-wrap: wrap;
 }
 .container-cards .card {
-  width: 29.5rem;
+  width: 29rem;
   height: 15rem;
   border-radius: 1rem;
   background: var(--bg-cards);

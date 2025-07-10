@@ -11,8 +11,7 @@
 
 
 body {
-    display: flex;
-    flex-direction: column;
+    @include centralize(column, center, center);
     min-height: 100vh;
     width: 80%;
     margin: auto;
@@ -22,6 +21,7 @@ body {
 .header-theme{
     @include centralize();
     height: 7rem;
+    width: 96%;
     
     &__bg{
         @include centralize(row, space-between,center);
@@ -46,23 +46,23 @@ body {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    @include centralize(column, center, center);
     padding-bottom: $main-bottom;
-
+    
     .empty{
         margin: auto;
         color: var(--text-primary);
         font-size: $title-size;
         font-weight: 600;
         display: none;
-
+        
         &.active{
             display: flex;
         }
     }
-
+    
     nav {
+        width: 96%;
         height: 6rem;
         @include centralize(row, space-between, center);
 
@@ -98,7 +98,7 @@ main {
     flex-wrap: wrap;
 
     .card{
-        width: 29.5rem;
+        width: 29rem;
         height: 15rem;
         border-radius: $border-radius-sm;
         background: var(--bg-cards);
