@@ -94,11 +94,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: .8rem;
     flex-wrap: wrap;
 
     .card{
-        width: 28rem;
+        //width: 28rem;
+        width: 100%;
+        max-width: 28rem;
         height: 15rem;
         border-radius: $border-radius-sm;
         background: var(--bg-cards);
