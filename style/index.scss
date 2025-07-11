@@ -21,7 +21,7 @@ body {
 .header-theme{
     @include centralize();
     height: 7rem;
-    width: 96%;
+    width: 89%;
     
     &__bg{
         @include centralize(row, space-between,center);
@@ -62,7 +62,7 @@ main {
     }
     
     nav {
-        width: 96%;
+        width: 89%;
         height: 6rem;
         @include centralize(row, space-between, center);
 

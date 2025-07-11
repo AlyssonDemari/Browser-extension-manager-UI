@@ -51,7 +51,7 @@ body {
   gap: 1rem;
   flex-wrap: nowrap;
   height: 7rem;
-  width: 96%;
+  width: 89%;
 }
 .header-theme__bg {
   display: flex;
@@ -96,7 +96,7 @@ main .empty.active {
   display: flex;
 }
 main nav {
-  width: 96%;
+  width: 89%;
   height: 6rem;
   display: flex;
   flex-direction: row;
