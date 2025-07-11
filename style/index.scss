@@ -98,9 +98,7 @@ main {
     flex-wrap: wrap;
 
     .card{
-        //width: 28rem;
-        width: 100%;
-        max-width: 27rem;
+        width: 27rem;
         height: 15rem;
         border-radius: $border-radius-sm;
         background: var(--bg-cards);
