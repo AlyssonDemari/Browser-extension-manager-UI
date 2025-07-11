@@ -42,6 +42,11 @@ body {
   margin: auto;
   background: var(--bg-primary);
 }
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+}
 
 .header-theme {
   display: flex;
@@ -132,6 +137,7 @@ main nav button:hover, main nav button:focus {
 }
 @media (max-width: 768px) {
   main nav {
+    width: 100%;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
@@ -154,6 +160,7 @@ main nav button:hover, main nav button:focus {
   align-items: center;
   gap: 0.8rem;
   flex-wrap: wrap;
+  width: 89%;
 }
 .container-cards .card {
   width: 27rem;
@@ -217,9 +224,19 @@ main nav button:hover, main nav button:focus {
 @media (max-width: 1238px) {
   .container-cards .card {
     width: 23.5rem;
+    min-width: 10rem;
     height: 13rem;
   }
   .container-cards .card__header h2, .container-cards .card__header p {
     font-size: 0.8rem;
+  }
+  .container-cards .card .btn-remove {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 350px) {
+  .container-cards .card {
+    width: 20.5rem;
+    height: 11rem;
   }
 }/*# sourceMappingURL=index.css.map */
