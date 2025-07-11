@@ -157,7 +157,7 @@ main nav button:hover, main nav button:focus {
 }
 .container-cards .card {
   width: 100%;
-  max-width: 28rem;
+  max-width: 27rem;
   height: 15rem;
   border-radius: 1rem;
   background: var(--bg-cards);
